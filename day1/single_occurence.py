@@ -17,8 +17,6 @@ import sys
 import unittest
 
 
-# Dynamic programing approach
-
 def find_ocurrencies(arr):
     memo = {}
     for i in arr:
@@ -44,4 +42,4 @@ class TestOcurrence(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(verbosity=2)
