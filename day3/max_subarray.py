@@ -24,6 +24,7 @@ def max_subarray_sum(arr):
         max_global = max(sum_sofar, max_global)
     return max_global
 
+
 ##Test
 
 class TestOcurrence(unittest.TestCase):
@@ -32,9 +33,9 @@ class TestOcurrence(unittest.TestCase):
         self.assertEqual(max_subarray_sum(arr), 6)
 
     def test_ocurrence_2(self):
-        arr = [4,-1,2,1]
+        arr = [4, -1, 2, 1]
         self.assertEqual(max_subarray_sum(arr), 6)
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
-
