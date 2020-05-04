@@ -16,17 +16,11 @@ import sys
 
 import unittest
 
-
-def find_ocurrencies(arr):
-    memo = {}
-    for i in arr:
-        if i in memo.keys():
-            memo[i] += 1
-        else:
-            memo[i] = 1
-    for key in memo:
-        if memo[key] == 1:
-            return key
+def singleNumber(A):
+    x = 0
+    for n in A:
+        x = x ^ n
+    return x
 
 
 ##Test
@@ -34,11 +28,11 @@ def find_ocurrencies(arr):
 class TestOcurrence(unittest.TestCase):
     def test_ocurrence_1(self):
         arr = [4, 1, 2, 1, 2]
-        self.assertEqual(find_ocurrencies(arr), 4)
+        self.assertEqual(singleNumber(arr), 4)
 
     def test_ocurrence_2(self):
         arr = [2, 2, 1]
-        self.assertEqual(find_ocurrencies(arr), 1)
+        self.assertEqual(singleNumber(arr), 1)
 
 
 if __name__ == '__main__':
